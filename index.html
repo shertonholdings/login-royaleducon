@@ -27,9 +27,14 @@
             height: auto;
         }
         .login-container h2 {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             font-size: 24px;
             color: #333;
+        }
+        .login-container p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #666;
         }
         .login-container input[type="text"], .login-container input[type="password"] {
             width: 90%;
@@ -63,6 +68,7 @@
 <div class="login-container">
     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgupYustZelLriiRRhty5B0z4tyBPhMfOp_xTgv0BXL99hDfBORUAt4aGWJlKGCTQT7xg5YsZDQi0hdVQpO6sr_OVp9gHBrIDs20ncNXqF44CKQiMJn1AKUkCsmOyg8DTisfS0-sCUHkLICWQU7JHxeb4_clHsxO9LlkJGR4Noz-31B-nqiRSyl1NXn-8I/s320/WhatsApp%20Image%202024-09-23%20at%2016.43.34.jpeg" alt="Logo">
     <h2>Login</h2>
+    <p>Enter your name and the password you received after sign up. You will be redirected immediately to access lessons!</p>
     <form id="loginForm" onsubmit="return validateForm()">
         <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
         <input type="password" id="password" name="password" placeholder="Enter password" required><br>
