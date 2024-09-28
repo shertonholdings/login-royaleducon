@@ -60,6 +60,7 @@
         .error-message {
             color: red;
             font-weight: bold;
+            display: none; /* Hide it initially */
         }
     </style>
 </head>
@@ -73,7 +74,7 @@
         <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
         <input type="password" id="password" name="password" placeholder="Enter password" required><br>
         <input type="submit" value="Login">
-        <p class="error-message" id="errorMessage" style="display:none;">Incorrect password. Please try again.</p>
+        <p class="error-message" id="errorMessage">Incorrect password. Please try again.</p>
     </form>
 </div>
 
@@ -90,6 +91,7 @@
         } else {
             // Show error message in red
             errorMessage.style.display = "block";
+            errorMessage.style.color = "red"; // Set the color to red explicitly
             return false; // Prevent form submission
         }
     }
