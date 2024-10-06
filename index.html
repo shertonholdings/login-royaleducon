@@ -57,6 +57,20 @@
         .login-container input[type="submit"]:hover {
             background-color: #45a049;
         }
+        .copy-password {
+            width: 90%;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px; /* Space between buttons */
+        }
+        .copy-password:hover {
+            background-color: darkred;
+        }
         .error-message {
             color: red;
             font-weight: bold;
@@ -74,6 +88,7 @@
         <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
         <input type="password" id="password" name="password" placeholder="Enter password" required><br>
         <input type="submit" value="Login">
+        <button type="button" class="copy-password" onclick="copyPassword()">Copy Password</button>
         <p class="error-message" id="errorMessage">Incorrect password. Please try again.</p>
     </form>
 </div>
@@ -94,6 +109,15 @@
             errorMessage.style.color = "red"; // Set the color to red explicitly
             return false; // Prevent form submission
         }
+    }
+
+    function copyPassword() {
+        var password = "Student24";
+        navigator.clipboard.writeText(password).then(function() {
+            alert("Password copied to clipboard!");
+        }, function(err) {
+            console.error("Could not copy text: ", err);
+        });
     }
 </script>
 
